@@ -28,6 +28,7 @@ class ComposerStaticInit026509606a55be5c56c243e48adc6597
         ),
         'S' =>
         array (
+            'Symfony\\Polyfill\\Time\\' => 22,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Contracts\\Translation\\' => 30,
             'Symfony\\Component\\Translation\\' => 30,
@@ -87,6 +88,10 @@ class ComposerStaticInit026509606a55be5c56c243e48adc6597
         'voku\\' =>
         array (
             0 => __DIR__ . '/..' . '/voku/portable-ascii/src/voku',
+        ),
+        'Symfony\\Polyfill\\Time\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-time',
         ),
         'Symfony\\Polyfill\\Mbstring\\' =>
         array (
@@ -221,6 +226,8 @@ class ComposerStaticInit026509606a55be5c56c243e48adc6597
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Time\\Duration' => __DIR__ . '/..' . '/symfony/polyfill-time/Resources/stubs/Time/Duration.php',
+        'Time\\TimeException' => __DIR__ . '/..' . '/symfony/polyfill-time/Resources/stubs/Time/TimeException.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

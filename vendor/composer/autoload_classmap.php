@@ -7,4 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'Time\\Duration' => $vendorDir . '/symfony/polyfill-time/Resources/stubs/Time/Duration.php',
+    'Time\\TimeException' => $vendorDir . '/symfony/polyfill-time/Resources/stubs/Time/TimeException.php',
 );

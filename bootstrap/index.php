@@ -16,7 +16,7 @@ $app = AppFactory::create();
 $middleware = require_once __DIR__ . '/../app/middleware.php';
 $middleware($app);
 
-$app->setBasePath("/slimphp-eureka");
+//$app->setBasePath("/slimphp-eureka");
 
 $routes = require_once __DIR__ . '/../app/routes.php';
 $routes($app);

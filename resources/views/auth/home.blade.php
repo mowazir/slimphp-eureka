@@ -2,11 +2,8 @@
 
 @section('content')
     <div style="padding: 10px">
-        <p>Auth home page</p>
+        <p> {{ $name}} Auth home page</p>
     </div>
 
 @endsection
-
-
-
 

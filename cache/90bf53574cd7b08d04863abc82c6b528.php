@@ -2,7 +2,7 @@
 
 <?php $__env->startSection('content'); ?>
     <div style="padding: 10px">
-        <p>Auth home page</p>
+       <?php echo e($name); ?> <p>Auth home page</p>
     </div>
 
 <?php $__env->stopSection(); ?>

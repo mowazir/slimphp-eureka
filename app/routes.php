@@ -1,7 +1,7 @@
 <?php
 
 use Slim\App;
-use Jenssegers\Blade\Blade;
+
 use Illuminate\Container\Container;
 use Illuminate\View\Compilers\BladeCompiler;
 use Illuminate\Filesystem\Filesystem;
@@ -20,36 +20,36 @@ if (!class_exists('SlimBladeContainer')) {
 
 return function(App $app) {
 
-    function view(Response $response, $template, $with = []){
-        $cache = __DIR__ . '/../cache';
-        $views = __DIR__ . '/../resources/views';
+    // function view(Response $response, $template, $with = []){
+    //     $cache = __DIR__ . '/../cache';
+    //     $views = __DIR__ . '/../resources/views';
 
-        // 2. Initialize and force override the global container instance with our wrapper
-        $container = new SlimBladeContainer();
-        Container::setInstance($container);
+    //     // 2. Initialize and force override the global container instance with our wrapper
+    //     $container = new SlimBladeContainer();
+    //     Container::setInstance($container);
 
-        // 3. Bind 'files' to handle filesystem operations
-        if (!$container->bound('files')) {
-            $container->singleton('files', function () {
-                return new Filesystem();
-            });
-        }
+    //     // 3. Bind 'files' to handle filesystem operations
+    //     if (!$container->bound('files')) {
+    //         $container->singleton('files', function () {
+    //             return new Filesystem();
+    //         });
+    //     }
 
-        // 4. Bind 'blade.compiler' to handle compiling templates
-        if (!$container->bound('blade.compiler')) {
-            $container->singleton('blade.compiler', function () use ($container, $cache) {
-                return new BladeCompiler($container->make('files'), $cache);
-            });
-        }
+    //     // 4. Bind 'blade.compiler' to handle compiling templates
+    //     if (!$container->bound('blade.compiler')) {
+    //         $container->singleton('blade.compiler', function () use ($container, $cache) {
+    //             return new BladeCompiler($container->make('files'), $cache);
+    //         });
+    //     }
 
-        // 5. Safely initialize Blade and render
-        $blade = new Blade($views, $cache);
-        $html = $blade->make($template, $with)->render();
+    //     // 5. Safely initialize Blade and render
+    //     $blade = new Blade($views, $cache);
+    //     $html = $blade->make($template, $with)->render();
         
-        $response->getBody()->write($html);
+    //     $response->getBody()->write($html);
 
-        return $response;
-    }
+    //     return $response;
+    // }
 
     $app->get('/home', function(Request $request, Response $response, $parameters) {
         $name = "Code Clean Arena";

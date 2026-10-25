@@ -1,9 +1,13 @@
 <?php
 
 use DI\Container;
+use App\Models\User;
 use Slim\Factory\AppFactory;
 
 require_once __DIR__ . '/../vendor/autoload.php';
+
+$user = new User;
+die();
 
 $container = new Container;
 

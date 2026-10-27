@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "02a3a95d41da7c2aee80932e45b918e0",
+    "content-hash": "4ba204073a0f0904a7f91491bc11b44d",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -1001,16 +1001,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "3.15.0",
+            "version": "3.15.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CarbonPHP/carbon.git",
-                "reference": "217d38553209bdb44e01590d9e9a2e4df8354cce"
+                "reference": "ce0e5636fae7d1e99856eb70cae4c719a284aa08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CarbonPHP/carbon/zipball/217d38553209bdb44e01590d9e9a2e4df8354cce",
-                "reference": "217d38553209bdb44e01590d9e9a2e4df8354cce",
+                "url": "https://api.github.com/repos/CarbonPHP/carbon/zipball/ce0e5636fae7d1e99856eb70cae4c719a284aa08",
+                "reference": "ce0e5636fae7d1e99856eb70cae4c719a284aa08",
                 "shasum": ""
             },
             "require": {
@@ -1103,7 +1103,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-10-18T18:27:53+00:00"
+            "time": "2026-10-25T14:32:48+00:00"
         },
         {
             "name": "nikic/fast-route",
@@ -1282,6 +1282,48 @@
                 }
             ],
             "time": "2025-08-16T11:10:48+00:00"
+        },
+        {
+            "name": "php-di/slim-bridge",
+            "version": "3.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHP-DI/Slim-Bridge.git",
+                "reference": "02ab0274a19d104d74561164f8915b62d93f3cf0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHP-DI/Slim-Bridge/zipball/02ab0274a19d104d74561164f8915b62d93f3cf0",
+                "reference": "02ab0274a19d104d74561164f8915b62d93f3cf0",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1 || ^8.0",
+                "php-di/invoker": "^2.0.0",
+                "php-di/php-di": "^6.0|^7.0",
+                "slim/slim": "^4.2.0"
+            },
+            "require-dev": {
+                "laminas/laminas-diactoros": "^2.1",
+                "mnapoli/hard-mode": "^0.3.0",
+                "phpunit/phpunit": ">= 7.0 < 10"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DI\\Bridge\\Slim\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHP-DI integration in Slim",
+            "support": {
+                "issues": "https://github.com/PHP-DI/Slim-Bridge/issues",
+                "source": "https://github.com/PHP-DI/Slim-Bridge/tree/3.4.1"
+            },
+            "time": "2024-06-19T15:47:45+00:00"
         },
         {
             "name": "psr/clock",
@@ -2514,7 +2556,11 @@
     "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": {},
+    "platform": {
+        "php": "^8.1",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
     "platform-dev": {},
     "plugin-api-version": "2.9.0"
 }

@@ -3,6 +3,7 @@
 <?php $__env->startSection('content'); ?>
     <div style="padding: 10px">
         <p> <?php echo e($name); ?> Auth home page</p>
+        <p>Go back <a href="/">home</a> </p>
     </div>
 
 <?php $__env->stopSection(); ?>

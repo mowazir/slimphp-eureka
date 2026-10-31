@@ -19,12 +19,14 @@ if (!class_exists('SlimBladeContainer')) {
 
 return function(App $app) {
 
-    $app->get('/home', function(Request $request, Response $response) {
+    $app->get('/home/{name}', function(Request $request, Response $response) {
         $name = "Code Clean Arena";
 
         return view($response, 'auth.home', compact('name'));
     });
 
     $app->get('/', [WelcomeController::class, 'index']);
+    $app->get('/{name}', [WelcomeController::class, 'show']);
+    
 
 };

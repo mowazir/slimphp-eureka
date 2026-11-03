@@ -5,6 +5,19 @@ use Illuminate\Container\Container;
 use Illuminate\View\Compilers\BladeCompiler;
 use Illuminate\Filesystem\Filesystem;
 use Psr\Http\Message\ResponseInterface as Response;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
+
+
+if (!function_exists('base_path'))
+{
+        function base_path($path= '')
+        {
+            return __DIR__ . "/../{$path}";
+        }
+}
+
+
 
 if(!function_exists('view'))
     {

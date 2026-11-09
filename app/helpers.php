@@ -264,8 +264,8 @@ if (!function_exists('app_path'))
 if(!function_exists('view'))
     {
         function view(Response $response, $template, $with = []){
-        $cache = __DIR__ . '/../cache';
-        $views = __DIR__ . '/../resources/views';
+        $cache = config('blade.cache');
+        $views = config('blade.views');
 
         // 2. Initialize and force override the global container instance with our wrapper
         $container = new SlimBladeContainer();

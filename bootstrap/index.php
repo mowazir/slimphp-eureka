@@ -3,14 +3,7 @@
 use DI\Container;
 use DI\Bridge\Slim\Bridge as SlimAppFactory;
 
-require_once __DIR__ . '/../vendor/autoload.php';
-
-$container = new Container;
-
-$settings = require_once __DIR__ . '/../app/settings.php';
-$settings($container);
-
-$app = SlimAppFactory::create($container);
+$app = SlimAppFactory::create(new Container);
 
 $middleware = require_once __DIR__ . '/../app/middleware.php';
 $middleware($app);

@@ -211,55 +211,55 @@ if (!function_exists('app_path'))
     }
 }
 
-// if (!function_exists('dd'))
-// {
-//     function dd()
-//     {
-//         array_map(function ($content) {
-//             echo "<pre>";
-//             var_dump($content);
-//             echo "</pre>";
-//             echo "<hr>";
-//         }, func_get_args());
+if (!function_exists('dd'))
+{
+    function dd()
+    {
+        array_map(function ($content) {
+            echo "<pre>";
+            var_dump($content);
+            echo "</pre>";
+            echo "<hr>";
+        }, func_get_args());
 
-//         die;
-//     }
-// }
+        die;
+    }
+}
 
-// if (!function_exists('throw_when'))
-// {
-//     function throw_when(bool $fails, string $message, string $exception = Exception::class)
-//     {
-//         if (!$fails) return;
+if (!function_exists('throw_when'))
+{
+    function throw_when(bool $fails, string $message, string $exception = Exception::class)
+    {
+        if (!$fails) return;
 
-//         throw new $exception($message);
-//     }
-// }
+        throw new $exception($message);
+    }
+}
 
-// if (! function_exists('class_basename')) {
-//     function class_basename($class)
-//     {
-//         $class = is_object($class) ? get_class($class) : $class;
+if (! function_exists('class_basename')) {
+    function class_basename($class)
+    {
+        $class = is_object($class) ? get_class($class) : $class;
 
-//         return basename(str_replace('\\', '/', $class));
-//     }
-// }
+        return basename(str_replace('\\', '/', $class));
+    }
+}
 
-// if (!function_exists('config'))
-// {
-//     function config($path = null, $value = null)
-//     {
-//         $config = app()->resolve('config');
+if (!function_exists('config'))
+{
+    function config($path = null, $value = null)
+    {
+        $config = app()->resolve('config');
 
-//         if (is_null($value)) {
-//             return data_get($config, $path);
-//         }
+        if (is_null($value)) {
+            return data_get($config, $path);
+        }
 
-//         data_set($config, $path, $value);
+        data_set($config, $path, $value);
 
-//         app()->bind('config', $config);
-//     }
-// }
+        app()->bind('config', $config);
+    }
+}
 
 if(!function_exists('view'))
     {
